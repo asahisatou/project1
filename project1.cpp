@@ -2,6 +2,7 @@
 
 int main() {
  cv::Mat img;
+ 
  img = cv::imread("/usr/local/pictures/chibany043.jpg");
  cv::Mat gray;
  cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
