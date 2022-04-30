@@ -22,7 +22,7 @@ int main()
 	{
 		cv::Mat img;
 		cap >> img;
-        
+
 		cv::Mat gray;
 		cv::Mat binary;
         cv::Mat sobel_image;
@@ -41,7 +41,7 @@ int main()
 	    cv::convertScaleAbs(sobel_image, output_image, 1, 0);
 
 	    // 閾値以上の場合にエッジ（＝白）と見なす(入力画像,出力画像,閾値,最大値,閾値タイプ)
-	    // cv::threshold(output_image, output_image, 64, 255, cv::THRESH_BINARY);
+	    cv::threshold(output_image, output_image, 64, 255, cv::THRESH_BINARY);
 
 		cv::imshow(windowName, output_image);//画像を表示．
 
